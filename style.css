@@ -78,8 +78,43 @@ a {
     margin-top: 5%;
     border-radius: 15px;
     border: 1px solid #e2e8f0;
+    display: grid;
+    grid-template-rows: 75px 1fr;
+}
+
+.books {
+    grid-row: 2 / 3;
+    padding: 20px;
+}
+
+.page-name {
+    grid-row: 1 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
 }
 
 .sider {
     grid-column: 3 / 4;
+    margin-top: 10%;
+}
+
+.trending-books {
+    background-color: white;
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid #e2e8f0;
+    margin-right: 10%;
+}
+
+.trending>p {
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+.text {
+    font-size: 0.9rem;
+    color: grey;
 }
