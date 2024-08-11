@@ -35,9 +35,14 @@ input, button, textarea, select {
 body {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    height: 100vh;
+    grid-template-rows: 1fr;
     gap: 35px;
     background-color: #F8FAFC;
+}
+
+html, 
+body {
+    height: 100%;
 }
 
 .menu {
@@ -76,6 +81,7 @@ a {
     grid-column: 2 / 3;
     background-color: white;
     margin-top: 5%;
+    margin-bottom: 5%;
     border-radius: 15px;
     border: 1px solid #e2e8f0;
     display: grid;
@@ -163,5 +169,13 @@ button {
     border: 1px solid black;
     padding: 5px 15px;
     background-color: white;
+    font-weight: 400;
+}
+
+#add-book-button {
+    border: none;
+}
+
+#add-book {
     font-weight: 400;
 }
