@@ -86,11 +86,17 @@ a {
     border: 1px solid #e2e8f0;
     display: grid;
     grid-template-rows: 75px 1fr;
+    z-index: 99;
 }
 
 .books {
     grid-row: 2 / 3;
     padding: 20px;
+}
+
+#add-book-container,
+#add-book-button {
+    cursor: pointer;
 }
 
 .page-name {
@@ -189,6 +195,7 @@ button {
     width: 100vw;
     backdrop-filter: blur(5px);
     display: none;
+    z-index: 9;
 }
 
 .add-book-form {
@@ -219,4 +226,12 @@ form {
 
 #submit-button {
     margin-top: 20px;
+    cursor: pointer;
+}
+
+#close-button {
+    max-width: 30px;
+    max-height: 30px;
+    margin-left: auto;
+    cursor: pointer;
 }
