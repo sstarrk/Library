@@ -10,7 +10,6 @@
     <title>Library</title>
 </head>
 <body>
-    <script src="./script.js"></script>
     <div class="menu">
         <div class="avatar">
             <img src="./avatar-(ProfilePictureMaker.com) (2).png" alt="Profile Picture">
@@ -105,5 +104,32 @@
             </div>
         </div>
     </div>
+    
+    <div class="form-container">
+        <div class="add-book-form">
+            <p id="input-info">Enter some info about book</p>
+            <form action="">
+                <div class="form-book-name">
+                    <label for="form-book-name">Enter Book Name: </label>
+                    <input type="text" id="form-book-name" name="form-book-name">
+                </div>
+                <div class="form-author">
+                    <label for="form-author">Enter Author: </label>
+                    <input type="text" id="form-author" id="form-author">
+                </div>
+                <div class="form-pages">
+                    <label for="form-pages">Enter Number of Pages: </label>
+                    <input type="number" id="form-pages" id="form-pages">
+                </div>
+                <div class="read-toggle">
+                    <label for="read-toggle">Did you read it?</label>
+                    <input type="text" id="read-toggle" name="read-or-not">
+                </div>
+
+                <button type="button" id="submit-button">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script src="./script.js"></script>
 </body>
 </html>
