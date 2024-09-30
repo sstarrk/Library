@@ -1,4 +1,4 @@
-const addBookButton = document.querySelector("#add-book-button");
+const addBookButton = document.querySelector("#add-book");
 const formContainer = document.querySelector(".form-container");
 const submitButton = document.querySelector("#submit-button");
 const closeButton = document.querySelector("#close-button");
@@ -43,6 +43,7 @@ submitButton.addEventListener("click", function (event) {
 });
 
 function displayBooks(array) {
+    books.innerHTML = "";
     array.forEach((eachBook) => {
         const newBookDiv = document.createElement("div");
         newBookDiv.setAttribute("class", "book");
@@ -76,4 +77,3 @@ function displayBooks(array) {
         buttons.appendChild(changeButton);
     })
 };
-

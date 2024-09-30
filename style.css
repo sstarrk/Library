@@ -102,10 +102,11 @@ a {
 .page-name {
     grid-row: 1 / 2;
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
     font-size: 1.6rem;
     letter-spacing: 1px;
+    gap: 18%;
 }
 
 .sider {
@@ -233,5 +234,13 @@ form {
     max-width: 30px;
     max-height: 30px;
     margin-left: auto;
+    cursor: pointer;
+}
+
+#add-book {
+    flex: 0 0 200px;
+    margin-right: 5%;
+    color: white;
+    background-color: green;
     cursor: pointer;
 }
