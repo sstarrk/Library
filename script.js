@@ -2,6 +2,7 @@ const addBookButton = document.querySelector("#add-book-button");
 const formContainer = document.querySelector(".form-container");
 const submitButton = document.querySelector("#submit-button");
 const closeButton = document.querySelector("#close-button");
+const books = document.querySelector(".books");
 
 addBookButton.addEventListener("click", () => {
     formContainer.style.display = "flex";
@@ -36,5 +37,43 @@ function addBookToLibrary() {
 submitButton.addEventListener("click", function (event) {
     event.preventDefault();
     addBookToLibrary();
+    formContainer.style.display = "none";
+    formContainer.style.zIndex = "9";
+    displayBooks(myLibrary);
 });
+
+function displayBooks(array) {
+    array.forEach((eachBook) => {
+        const newBookDiv = document.createElement("div");
+        newBookDiv.setAttribute("class", "book");
+        books.appendChild(newBookDiv);
+        const bookName = document.createElement("p");
+        bookName.textContent = eachBook.title;
+        bookName.setAttribute("class", "book-name");
+        newBookDiv.appendChild(bookName);
+        const bookAuthor = document.createElement("p");
+        bookAuthor.textContent = eachBook.author;
+        bookAuthor.setAttribute("class", "book-auth");
+        newBookDiv.appendChild(bookAuthor);
+        const bookPages = document.createElement("p");
+        bookPages.textContent = eachBook.pages;
+        bookPages.setAttribute("class", "book-pages");
+        newBookDiv.appendChild(bookPages);
+        const bookStatus = document.createElement("p");
+        bookStatus.textContent = eachBook.read;
+        bookStatus.setAttribute("class", "status");
+        newBookDiv.appendChild(bookStatus);
+        const buttons = document.createElement("div");
+        buttons.setAttribute("class", "buttons");
+        newBookDiv.appendChild(buttons);
+        deleteButton = document.createElement("button");
+        deleteButton.textContent = "Delete";
+        deleteButton.setAttribute("class", "delete");
+        buttons.appendChild(deleteButton);
+        changeButton = document.createElement("button");
+        changeButton.textContent = "Status";
+        changeButton.setAttribute("class", "change-status");
+        buttons.appendChild(changeButton);
+    })
+};
 
