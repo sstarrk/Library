@@ -11,7 +11,7 @@ addBookButton.addEventListener("click", () => {
 closeButton.addEventListener("click", () => {
     formContainer.style.display = "none";
     formContainer.style.zIndex = "9";
-})
+});
 
 const myLibrary = [];
 
@@ -27,11 +27,11 @@ function addBookToLibrary() {
     let newBook = new Book(
         document.querySelector("#form-book-name").value,
         document.querySelector("#form-author").value, 
-        document.querySelector("#form-pages"),
-        document.querySelector("read-toggle")
+        document.querySelector("#form-pages").value,
+        (document.querySelector(`[name="book_read"]`).value)
     );
     myLibrary.push(newBook);
-}
+};
 
 submitButton.addEventListener("click", function (event) {
     event.preventDefault();

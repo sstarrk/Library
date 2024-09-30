@@ -207,7 +207,7 @@ button {
     padding: 40px;
 }
 
-input {
+input:not([type="radio"]) { 
     display: flex;
     width: 100%;
 }

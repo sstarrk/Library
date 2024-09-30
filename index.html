@@ -119,17 +119,25 @@
                 </div>
                 <div class="form-author">
                     <label for="form-author">Enter Author: </label>
-                    <input type="text" id="form-author" id="form-author" required>
+                    <input type="text" id="form-author" name="form-author" required>
                 </div>
                 <div class="form-pages">
                     <label for="form-pages">Enter Number of Pages: </label>
-                    <input type="number" id="form-pages" id="form-pages" required>
+                    <input type="number" id="form-pages" name="form-pages" required>
                 </div>
-                <div class="read-toggle">
-                    <label for="read-toggle">Did you read it?</label>
-                    <input type="text" id="read-toggle" name="read-or-not" required>
+                <div>
+                    <p>Did you read this book?</p>
+                    <div>
+                        <div>
+                            <input type="radio" id="read-yes" name="book_read" value="Read" required>
+                            <label for="read-yes">Yes</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="read-no" name="book_read" value="Not Read" required>
+                            <label for="read-no">No</label>
+                        </div>
+                    </div>
                 </div>
-
                 <button id="submit-button">Submit</button>
             </form>
         </div>
