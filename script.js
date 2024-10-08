@@ -43,10 +43,13 @@ submitButton.addEventListener("click", function (event) {
 });
 
 function displayBooks(array) {
+    let count = 0;
     books.innerHTML = "";
     array.forEach((eachBook) => {
+        count = count + 1;
         const newBookDiv = document.createElement("div");
         newBookDiv.setAttribute("class", "book");
+        newBookDiv.dataset.index = count;
         books.appendChild(newBookDiv);
         const bookName = document.createElement("p");
         bookName.textContent = eachBook.title;
@@ -70,6 +73,7 @@ function displayBooks(array) {
         deleteButton = document.createElement("button");
         deleteButton.textContent = "Delete";
         deleteButton.setAttribute("class", "delete");
+        deleteButton.dataset.index = count;
         buttons.appendChild(deleteButton);
         changeButton = document.createElement("button");
         changeButton.textContent = "Status";
@@ -77,3 +81,18 @@ function displayBooks(array) {
         buttons.appendChild(changeButton);
     })
 };
+
+const deleteBookButton = document.querySelectorAll(".delete");
+const booksCount = document.querySelectorAll(".book");
+
+deleteBookButton.forEach((eachButton) => {
+    console.log(eachButton.dataset.index);
+    eachButton.addEventListener("click", () => {
+        booksCount.forEach((eachBook) => {
+            if (eachButton.dataset.index == eachBook.dataset.index) {
+                myLibrary.splice(eachBook.dataset.index - 1, 1);
+            };
+            displayBooks(myLibrary);
+        })
+    });
+});
