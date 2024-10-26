@@ -5,6 +5,11 @@ const closeButton = document.querySelector("#close-button");
 const books = document.querySelector(".books");
 
 addBookButton.addEventListener("click", () => {
+    document.querySelector("#form-book-name").value = "";
+    document.querySelector("#form-author").value = ""; 
+    document.querySelector("#form-pages").value = "";
+    document.querySelector("#read-yes").checked = false;
+    document.querySelector("#read-no").checked = false;
     formContainer.style.display = "flex";
     formContainer.style.zIndex = "100";
 });
@@ -16,12 +21,21 @@ closeButton.addEventListener("click", () => {
 
 const myLibrary = [];
 
-function Book(title, author, pages, read)  {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-};
+// function Book(title, author, pages, read)  {
+//     this.title = title;
+//     this.author = author;
+//     this.pages = pages;
+//     this.read = read;
+// };
+
+class Book {
+    constructor(title, author, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    }
+}
 
 function addBookToLibrary() {
 
